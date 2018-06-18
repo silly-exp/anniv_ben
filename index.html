@@ -5,7 +5,6 @@
 <title>RansomWare</title>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="effects.js"></script>
 
 </head>
 <body bgcolor="#000000" style="font-family: Arial, Helvetica, sans-serif;">
@@ -23,9 +22,6 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 <div id="countdown"  align="center" style="color:#FF0000;font-size:50px">
 </div>
 
-<div id="bugsbackground">
-	Nicolas est en test. 
-</div>
 
 
 <script>
@@ -34,8 +30,13 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 		inputElem = document.getElementById("keyinput")
 		var inputStr = inputElem.value;
 		if (inputStr == key){
-			document.getElementById("hackerText").innerHTML = "Vous avez saisie la bonne clef. Les données sont en cours de décryptage...";
+			hElem = document.getElementById("hackerText");
+			hElem.style.color="#000000";
+			hElem.innerHTML = "<br><br><br>Vous avez saisie la bonne clef. Les données sont en cours de décryptage...<br><br><br>";
 			setTimeout(function(){ window.open("mairie.html",'_self'); }, 10000);
+			clearInterval(countDownInterval);
+			document.body.style.background ="#ffffff";
+			document.getElementById("countdown").innerHTML = "<img src='working.gif'>";
 			return
 		}
 		if (key.startsWith(inputStr)){
@@ -48,11 +49,11 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 
 
 <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jun 23, 2018 17:00:00").getTime();
+	// Set the date we're counting down to
+	var countDownDate = new Date("Jun 23, 2018 17:00:00").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+	// Update the count down every 1 second
+	var countDownInterval = setInterval(function() {
 
     // Get todays date and time
     var now = new Date().getTime();
