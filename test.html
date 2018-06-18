@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RansomWare</title>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="effects.js"></script>
+
+</head>
+<body>
+
+<div id="bonjour">
+</div>
+<div id="merci">
+</div>
+<div id="dites_adresse">
+</div>
+<div id="saisie_adresse">
+</div>
+<div id="livraison_en_cours">
+</div>
+<div id="livraison_faite">
+</div>
+
+<audio id="doung" src="doung.mp3"></audio>
+
+<script>
+var player = document.querySelector('#doung');
+player.play();
+setTimeout(function(){ document.getElementById("bonjour").innerHTML="Bonjour, Je suis Laurent Turquois, le maire de Saint-Sébastien"; player.play();}, 500);
+setTimeout(function(){ document.getElementById("merci").innerHTML="Merci beaucoup les enfants! Vous avez sauvez les mini-camps"; player.play(); }, 1000);
+setTimeout(function(){ 
+	document.getElementById("dites_adresse").innerHTML="Nous aimerions vous remercier pour votre travail. Pouvez-vous nous donner votre adresse postale?"; 
+	document.getElementById("saisie_adresse").innerHTML="<form onsubmit='livraison(event)'><input type='text' size=80 ></form>"; 
+//<input type='submit' style='width: 1px; height: 1px;'/>
+	 player.play();
+}, 1500);
+
+function livraison(evt){
+	evt.preventDefault();
+	setTimeout(function(){ document.getElementById("livraison_en_cours").innerHTML="Bonjour, Je suis le livreur. Votre livraison est en cours...";  player.play();}, 500);
+	setTimeout(function(){ document.getElementById("livraison_faite").innerHTML="Ca y est votre récompense est livrée dans votre boîte aux lettre (oui nous sommes très rapide). Bonne journée!";  player.play();}, 1000);
+	return false;
+
+}
+
+</script>
+
+</body>
+</html> 
+
+
+

@@ -1,0 +1,438 @@
+#xvox_accesskey {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  width: 0;
+  height: 0;
+}
+.xvox_btn {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline-style: none;
+}
+
+#playerVoc {
+visibility: hidden;
+position: absolute;
+padding: 0;
+width: 160px;
+height: 30px;
+background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/progress.png');
+background-repeat: no-repeat;
+background-position: 12px 0;
+background-size: 92% 100%;
+-moz-background-size: 92% 100%;
+left: -130px;
+}
+#phldiv {
+  display: none;
+  position: absolute;
+  padding: 0;
+  width: 140px;
+  height: 30px;
+  background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/progress.png');
+  background-repeat: no-repeat;
+  background-position: 12px 0;
+  background-size: 92% 100%;
+  margin: 0;
+}
+#voxi_player_div, #voxi_player_div_hl {
+width: 30px;
+float: left;
+height: 28px;
+  margin-top: 2px;
+}
+#play, #playHL {
+height: 100%;
+width: 100%;
+background-color: transparent;
+border: none;
+padding: 0;
+line-height: 0;
+float: left;
+cursor: pointer;
+outline-style: none;
+  margin: 0;
+}
+
+#play_img {
+  width: 28px;
+  height: 28px;
+}
+#vocHigh {
+  height: 28px;
+}
+#pauseHL {
+  margin-left: 4px;
+}
+#stop, #stopHL {
+  margin-left: 2px;
+  margin-right: 4px;
+}
+
+.img_btn_player {
+width: 13px;
+height: 13px;
+}
+#voxi_actions_div, #voxi_actions_div_hl {
+float: left;
+width: 127px;
+margin-top: 8px;
+position: relative;
+#margin-left: 3px;
+  margin-top: 8px;
+}
+.btn_voxi_player {
+background-color: transparent !important;
+border: none !important;
+line-height: 0;
+float: left;
+width: 13px !important;
+height: 13px !important;
+padding: 0 !important;
+margin-right: 0px;
+margin-left: 1px;
+cursor: pointer;
+outline-style: none;
+}
+#voxi_seekbar, #voxi_seekbar_HL {
+float: left;
+width: 50px;
+height: 13px;
+background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/bg_progress.png');
+background-size: 100% 88%;
+background-repeat: no-repeat;
+#margin-top: 1px;
+}
+#voxi_seekbar_HL {
+  margin-left: 4px;
+}
+#voxi_time_play, #timePlayHL {
+display: block;
+width: 0%;
+height: 90%;
+background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/c_progress.png');
+background-repeat: no-repeat no-repeat;
+background-size: 100% 100%;
+padding: 0 !important;
+}
+#voxi_loaded {
+  display: none;
+  width: 100%;
+  height: 90%;
+  background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/waitVoc.gif');
+  background-repeat: no-repeat no-repeat;
+  background-size: 105% 140%;
+  background-position: -2px -3px;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+#engine {
+background-color: transparent;
+border: none;
+padding: 0;
+line-height: 0;
+float: left;
+width: 13px !important;
+height: 14px !important;
+cursor: pointer;
+outline-style: none;
+margin-right: 0;
+margin-left: 2px;
+}
+#engine_img {
+width: 13px;
+height: 12px;
+}
+
+#xvox_dl_mp {
+    height: 12px;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 4px !important;
+    margin-right: 0 !important;
+    float: left;
+    width: 13px;
+}
+
+#xvox_dl_mp_img {
+  height: 12px;
+  width: 13px;
+}
+
+#xvox_dl_file_window {
+  display: none;
+  position: absolute;
+  background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/bg_engine_new.png');
+  width: 200px;
+  height: 110px;
+  top: 17px;
+  z-index: 7;
+  color: white;
+  background-size: 100% 100%;
+  font-size: 10px;
+}
+
+.xvox_dl_window_p {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+#xvox_dl_mp_link {
+    display: block;
+    width: 154px;
+    float: left;
+}
+
+#xvox_close_mp_link {
+    float: left;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.xvox_dl_class {
+  color: white;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-top: 3px;
+  padding-left: 2px;
+}
+
+#close_player {
+  float: left;
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  padding: 0;
+  height: 13px;
+  line-height: 14px;
+  margin-left: 2px;
+  /* padding: 3px; */
+  color: white;
+  cursor: pointer;
+    margin-top: -1px;
+    outline-style: none;
+}
+#close_player:hover {
+  color: black;
+  font-weight: bold;
+}
+#voxi_menu {
+    display: none;
+    float: right;
+    width:95%;
+    height: 75%;
+    padding-top:5px;
+    font-size: 12px;
+    z-index: 9;
+    text-align: left;
+}
+#voxi_menu  > a {
+    width: 100%;
+    height: 18px;
+    background: none;
+}
+#voxi_menu_bg {
+  display: none;
+font-family: 'Source Sans Pro';
+position: absolute;
+background-color: transparent;
+width: 110px;
+height: 50px;
+left: 160px;
+top: 5px;
+background-image: none;
+background-repeat: no-repeat;
+background-position: 0px 0px;
+background-size: 100% 90%;
+z-index: 1;
+}
+a.menu_engine {
+    display: block;
+    font-size:12px;
+    line-height: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 0;
+    color: white;
+    text-decoration: none;
+}
+a.menu_engine:hover {
+    background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/puce_engine_hover.png');
+}
+img.sep_menu_engine {
+    display: block;
+    width: 100%;
+}
+#voxi_speed_managment, #voxi_highlight_managment, #voxi_volume_managment {
+    display: none;
+    position: absolute;
+    left: 115px;
+    width: 100%;
+    background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/bg_engine_new.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 2px;
+}
+
+#voxi_speed_managment {
+    text-align: left;
+    top: 5px;
+}
+
+#voxi_speed_managment > a {
+    width: 100%;
+    color: white;
+    text-decoration : none;
+}
+
+#voxi_highlight_managment {
+    top: 0;
+}
+
+.colorSurb > a:hover {
+  border: 1px solid white;
+}
+
+#voxi_volume_managment {
+    top: 20px;
+}
+
+.vol_up {
+    background:#ffffff !important;
+}
+
+.vol_down {
+    background:#dedede !important;
+}
+
+ a[class*="voxi_lvl"] {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    text-decoration : none;
+    background-position: 0 0 !important;
+    background-image: none !important;
+    padding: 0 !important;
+ }
+ a[class*="voxi_lvl"]:hover {
+    background:#999;
+ }
+
+ #voxi_lvl1 {
+    width: 5px;
+    height: 8px;
+    display: block;
+    vertical-align: none;
+ }
+ #voxi_lvl2 {
+    width: 5px;
+    height: 12px;
+    left: 7px;
+    display: block;
+    vertical-align: none;
+ }
+ #voxi_lvl3 {
+    width: 5px;
+    height: 16px;
+    left: 14px;
+    display: block;
+    vertical-align: none;
+ }
+ #voxi_lvl4 {
+    width: 5px;
+    height: 20px;
+    left: 21px;
+    display: block;
+    vertical-align: none;
+ }
+
+ .voxi_manage_lvl {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    color: white;
+    text-decoration: none;
+ }
+
+ #voxi_less_lvl {
+    width: 4px;
+height: 100%;
+    left: -15px;
+    top: 5px;
+    background-position: 0 0 !important;
+    background-image: none !important;
+    padding: 0 !important;
+ }
+
+ #voxi_more_lvl {
+    width: 4px;
+height: 100%;
+    left: 32px;
+    top: 5px;
+    background-position: 0 0 !important;
+    background-image: none !important;
+    padding: 0 !important;
+ }
+
+ .vocalised_by_voxi {
+    display: block;
+    float: right;
+    font-size: 8px !important;
+    padding-top: 0 !important;
+    padding-right: 3px !important;
+    color: black;
+    margin-top: 5px;
+}
+
+.selectedColor {
+  border: 1px solid white;
+}
+
+.colorSurb > a {
+  border-radius: 3px;
+  background-position: 0 0 !important;
+  background-image: none !important;
+  padding: 0 !important;
+}
+
+#xvox_core {
+  width: 16px;
+  height: 16px;
+  background-image: url('https://www.saintsebastien.fr/sites/all/themes/basic/library/built/img/xvox/xvox.png') !important;
+  background-size: 16px 16px;
+  margin-left: 5px;
+  margin-right: 2px;
+}
+
+#xvox_core > a {
+ width: 16px;
+ height: 16px;
+}
+
+#xvox_core > a > img {
+    width: 16px;
+    height: 16px;
+}
+
+#playerVocCompat {
+  position: absolute;
+  left: 5px;
+  top: -1000px;
+}
+
+#playerCompat {
+  visibility: visible;
+}
