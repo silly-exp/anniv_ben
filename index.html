@@ -11,14 +11,16 @@
 <div id="hackerText" align="center" style="color:#00FF00;font-size:30px">
 	
 
-Vos documents, données, photos, fichiers de votre système informatique ont été crypté par Doom Locker. La clé de déchiffrement est stockée sur un serveur internet secret. Personne ne peut décrypter vos fichiers jusqu'à ce que vous payez pour obtenir cette clé. Vous n'avez que jusqu'au 23 juin, 17 h pour payer la somme de 30 000 euros. A moins que vous ne soyez suffisamment malin pour trouver la clé par vous-même...Voyons voir : "47°.194742,-1°.509973".
+Vos documents, données, photos, fichiers de votre système informatique ont été crypté par Doom Locker. La clé de déchiffrement est stockée sur un serveur internet secret. Personne ne peut décrypter vos fichiers jusqu'à ce que vous payez pour obtenir cette clé. Vous n'avez que jusqu'au 23 juin, 17 h pour payer la somme de 30 000 euros. A moins que vous ne soyez suffisamment malin pour trouver la clé par vous-même...Voyons voir : "47°.194548,-1°.509735".
 
 </div>
 <div align="center" >
 	<form>
-		<input type="text" name="key" id="keyinput" size="64" style="font-size:30px;color:#0000FF" onkeyup="validValue()">
+		<input type="text" name="key" id="keyinput" size="40" style="font-size:30px;color:#0000FF" onkeyup="validValue()">
 	</form>
 </div>
+<br>
+<br>
 <div id="countdown"  align="center" style="color:#FF0000;font-size:50px">
 </div>
 
@@ -41,6 +43,15 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 		}
 		if (key.startsWith(inputStr)){
 			inputElem.style.color  = "#007700";
+			if (inputStr.length == key.length -1){
+				hElem = document.getElementById("hackerText");
+				hElem.innerHTML = "<img src='crane.png'><br>"
+				hElem.innerHTML += "Vous ne pensiez tout de même pas que j'allais vous donner toute la clé!?<br>"; 
+				hElem.innerHTML += "Je vous laisse 2 minutes pour trouver le dernier caractère tout seul!<br>";
+				hElem.innerHTML += "Ah! Ah! Ah!";
+				countDownDate = new Date().getTime() + (2 * 60 * 1000);
+				document.getElementById("countdown").style.fontSize = "200px";
+			}
 		}else{
 			inputElem.style.color  = "#ff0000";
 		}
@@ -55,28 +66,34 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 	// Update the count down every 1 second
 	var countDownInterval = setInterval(function() {
 
-    // Get todays date and time
-    var now = new Date().getTime();
+		// Get todays date and time
+		var now = new Date().getTime();
+
+		// Find the distance between now an the count down date
+		var distance = countDownDate - now;
+
+		// Time calculations for days, hours, minutes and seconds
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// If the count down is over, write some text 
+		if (distance < 0) {
+			clearInterval(countDownInterval);
+			document.getElementById("countdown").innerHTML = "EXPIRED";
+			return;
+		}
     
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="ldsfjk"
-    document.getElementById("countdown").innerHTML = days + "j " + hours + "h "
-    + minutes + "min " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
-}, 1000);
+		// Output the result in an element with id="ldsfjk"
+		cdElem = document.getElementById("countdown") 
+		cdElem.innerHTML = "";
+		if (days > 0){ cdElem.innerHTML += days + "j "};
+		if (hours > 0){ cdElem.innerHTML += hours + "h "};
+		if (minutes > 0){ cdElem.innerHTML += minutes + "min "};
+		cdElem.innerHTML += seconds + "s ";
+
+	}, 1000);
 </script>
 
 </body>

@@ -335,13 +335,13 @@ function livraison(evt){
 		elem.innerHTML="<img src='livreur.png' width=100 height=100><p>Bonjour, Je suis Fred le livreur.<br> J'ai un paquet pour vous.<br> Votre livraison est en cours...</p>";
 		player.play();
 		elem.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-	}, 3000);
+	}, 1500);
 	setTimeout(function(){ 
 		elem = document.getElementById("livraison_faite");
 		elem.innerHTML="<img src='livreur.png' width=100 height=100><p>Ca y est, votre coli a été déposé dans votre boîte aux lettres. <br>Oui nous sommes très rapide :-).<br> Bonne journée!</p>";
 		player.play();
 		elem.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-}, 10000);
+}, 8000);
 	return false;
 	
 function built_chat_box(user, speech){
