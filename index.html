@@ -43,7 +43,7 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 		}
 		if (key.startsWith(inputStr)){
 			inputElem.style.color  = "#007700";
-			if (inputStr.length == key.length -1){
+			if (inputStr.length == key.length -1 && !isLastCaractere){
 				hElem = document.getElementById("hackerText");
 				hElem.innerHTML = "<img src='crane.png'><br>"
 				hElem.innerHTML += "Vous ne pensiez tout de même pas que j'allais vous donner toute la clé!?<br>"; 
@@ -51,6 +51,7 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 				hElem.innerHTML += "Ah! Ah! Ah!";
 				countDownDate = new Date().getTime() + (2 * 60 * 1000);
 				document.getElementById("countdown").style.fontSize = "200px";
+				isLastCaractere = true;
 			}
 		}else{
 			inputElem.style.color  = "#ff0000";
@@ -61,7 +62,8 @@ Vos documents, données, photos, fichiers de votre système informatique ont ét
 
 <script>
 	// Set the date we're counting down to
-	var countDownDate = new Date("Jun 23, 2018 17:00:00").getTime();
+	var countDownDate = new Date("Jun 24, 2018 17:00:00").getTime();
+	isLastCaractere = false;
 
 	// Update the count down every 1 second
 	var countDownInterval = setInterval(function() {
