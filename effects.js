@@ -1,3 +1,5 @@
+// A quoi ça sert?
+
 $(document).ready( function () {
 	// $("#bugsbackground").fadeOut(2000);
 	// $('<p>mon text qui grandi</p>').appendTo('#bugsbackground');
